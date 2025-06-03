@@ -12,7 +12,7 @@ async function loadRSS() {
     container.innerHTML = ''; // Clear loading text
 
     // Fix container height, hide overflow (no scroll)
-    container.style.height = '480px';
+    container.style.height = '440px';
     container.style.overflow = 'hidden';
     container.style.whiteSpace = 'normal'; // Allow wrapping inside items
 
@@ -51,7 +51,18 @@ async function loadRSS() {
           </div>
           <div style="overflow: hidden;">
             <a href="${link}" class="stretched-link" target="_blank" rel="noopener noreferrer">
-              <h3 style="overflow: hidden; text-overflow: ellipsis; white-space: nowrap; margin: 0; font-size: 1.2rem; margin-top: 16px;">${title}</h3>
+              <h3 style="
+              font-size: 1.2rem;
+              margin: 0;
+              margin-top: 16px;
+              overflow: hidden;
+              display: -webkit-box;
+              -webkit-line-clamp: 2;
+              -webkit-box-orient: vertical;
+              text-overflow: ellipsis;
+              line-height: 1.3em;
+              max-height: 2.6em;
+              ">${title}</h3>
             </a>
             <p style="
               font-size: 1rem;
