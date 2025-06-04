@@ -47,7 +47,7 @@ async function loadRSS() {
       newsItem.innerHTML = `
         <div class="service-item position-relative" data-aos="zoom-in" style="height: 440px; overflow: hidden;">
           <div class="img" style="overflow: hidden;">
-            ${imgUrl ? `<img src="${imgUrl}" class="img-fluid" alt="${title}" style="object-fit: cover; width: 100%; height: 100%;">` : ''}
+            ${imgUrl ? `<img src="${imgUrl}" class="img-fluid" alt="${title}" style="object-fit: cover; width: 100%; height: 230px;">` : ''}
           </div>
           <div style="overflow: hidden;">
             <a href="${link}" class="stretched-link" target="_blank" rel="noopener noreferrer">
