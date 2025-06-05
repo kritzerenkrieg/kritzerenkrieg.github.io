@@ -50,26 +50,31 @@
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="/" class="active">Beranda</a></li>
-          <li class="dropdown"><a href="../dashboard"><span>Dashboard</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <li><a href="#hero" class="active">Beranda</a></li>
+          <li class="dropdown"><a href="#"><span>Dashboard</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
-              <li><a href="https://www.its.ac.id/ppid/data-statistik-its/">Pemeringkatan</a></li>
-              <li><a href="https://www.its.ac.id/ppid/data-statistik-its/">Akademik</a></li>
-              <li><a href="https://www.its.ac.id/ppid/data-statistik-its/">Akreditasi</a></li>
-              <li><a href="https://www.its.ac.id/ppid/data-statistik-its/">Kemahasiswaaan</a></li>
+              <li><a href="dashboard/pemeringkatan/">Pemeringkatan</a></li>
+              <li><a href="dashboard/akademik/">Akademik</a></li>
+              <li class="dropdown"><a href="/" class="active">Akreditasi</a>
+                <ul>
+                  <li><a href="dashboard/akreditasi/nasional/" >Nasional</a></li>
+                  <li><a href="dashboard/akreditasi/internasional/"class="active">International</a></li>
+                </ul>
+              </li>
+              <li><a href="dashboard/kemahasiswaan/">Kemahasiswaaan</a></li>
               <li><a href="#">Sarana Prasarana</a></li>  
               <li><a href="#">Keuangan</a></li>
               <li class="dropdown"><a href="#">SDM</a>
                 <ul>
-                  <li><a href="https://data.its.ac.id/myits_onedata_v2/dashboardkepegawaiandosen">Dosen</a></li>
-                  <li><a href="https://data.its.ac.id/myits_onedata_v2/dashboardkepegawaiantendik">Tendik</a></li>
+                  <li><a href="/dashboard/sdm/dosen/">Dosen</a></li>
+                  <li><a href="/dashboard/sdm/tendik/">Tendik</a></li>
                 </ul>
               </li>
-              <li><a href="https://data.its.ac.id/myits_onedata_v2/dashboardscholar">Penelitian</a></li>
+              <li><a href="/dashboard/penelitian/">Penelitian</a></li>
               <li class="dropdown"><a href="#">Pengabdian Masyarakat</a>
                 <ul>
-                  <li><a href="#">Pengabdian Masyarakat</a></li>
-                  <li><a href="https://data.its.ac.id/kkn/dashboardkkn">KKN</a></li>
+                  <li><a href="/dashboard/pengabdian-masyarakat/pengabdian masyarakat/">Pengabdian Masyarakat</a></li>
+                  <li><a href="/dashboard/pengabdian-masyarakat/kkn/">KKN</a></li>
                 </ul>
               </li>
             </ul>
@@ -105,9 +110,9 @@
         <div class="row align-items-center">
           <div class="col-lg-6">
             <div class="hero-content" data-aos="fade-up" data-aos-delay="200">
-              <h1 class="mb-4" style="color: #013880;">
+              <h1 class="mb-4">
                 Satu Data <br>
-                <span class="accent-text" style="color: #ffc410;">ITS</span>
+                <span class="accent-text">ITS</span>
               </h1>
 
               <p class="mb-4 mb-md-5">
@@ -184,7 +189,7 @@
         <h2>Dashboard</h2>
       </div><!-- End Section Title -->
 
-      <div class="row justify-content-center mb-4" data-aos="fade-up">
+      <div class="row gy-4 gx-3 d-flex flex-wrap justify-content-center mb-4" data-aos="fade-up">
           <div class="col-md-6 col-lg-4">
             <form role="search">
               <div class="input-group">
@@ -199,9 +204,9 @@
 
       <div class="container">
 
-        <div class="row gy-4">
+        <div class="row gy-4 gx-3 d-flex flex-wrap justify-content-center">
 
-          <div class="col-xl-3 col-md-3" data-aos="zoom-in" data-aos-delay="100">
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
             <a href="https://www.google.com"  class="text-decoration-none text-dark">
             <div class="feature-box blue d-flex align-items-start gap-3">
               <i class="bi bi-bar-chart fs-1 flex-shrink-0"></i>
@@ -213,20 +218,7 @@
             </a>
           </div><!-- End Feature Borx-->
 
-          <div class="col-xl-3 col-md-3" data-aos="zoom-in" data-aos-delay="100">
-            <a href="https://www.google.com"  class="text-decoration-none text-dark">
-            <div class="feature-box blue d-flex align-items-start gap-3">
-              <i class="bi bi-bar-chart fs-1 flex-shrink-0"></i>
-              <div>
-                <h4>Corporis voluptates</h4>
-                <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
-              </div>
-            </div>
-            </a>
-          </div><!-- End Feature Borx-->
-
-
-          <div class="col-xl-3 col-md-3" data-aos="zoom-in" data-aos-delay="100">
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
             <a href="https://www.google.com"  class="text-decoration-none text-dark">
             <div class="feature-box blue d-flex align-items-start gap-3">
               <i class="bi bi-bar-chart fs-1 flex-shrink-0"></i>
@@ -239,7 +231,7 @@
           </div><!-- End Feature Borx-->
 
 
-          <div class="col-xl-3 col-md-3" data-aos="zoom-in" data-aos-delay="100">
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
             <a href="https://www.google.com"  class="text-decoration-none text-dark">
             <div class="feature-box blue d-flex align-items-start gap-3">
               <i class="bi bi-bar-chart fs-1 flex-shrink-0"></i>
@@ -252,7 +244,7 @@
           </div><!-- End Feature Borx-->
 
 
-          <div class="col-xl-3 col-md-3" data-aos="zoom-in" data-aos-delay="100">
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
             <a href="https://www.google.com"  class="text-decoration-none text-dark">
             <div class="feature-box blue d-flex align-items-start gap-3">
               <i class="bi bi-bar-chart fs-1 flex-shrink-0"></i>
@@ -265,7 +257,7 @@
           </div><!-- End Feature Borx-->
 
 
-          <div class="col-xl-3 col-md-3" data-aos="zoom-in" data-aos-delay="100">
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
             <a href="https://www.google.com"  class="text-decoration-none text-dark">
             <div class="feature-box blue d-flex align-items-start gap-3">
               <i class="bi bi-bar-chart fs-1 flex-shrink-0"></i>
@@ -278,7 +270,7 @@
           </div><!-- End Feature Borx-->
 
 
-          <div class="col-xl-3 col-md-3" data-aos="zoom-in" data-aos-delay="100">
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
             <a href="https://www.google.com"  class="text-decoration-none text-dark">
             <div class="feature-box blue d-flex align-items-start gap-3">
               <i class="bi bi-bar-chart fs-1 flex-shrink-0"></i>
@@ -291,7 +283,20 @@
           </div><!-- End Feature Borx-->
 
 
-          <div class="col-xl-3 col-md-3" data-aos="zoom-in" data-aos-delay="100">
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
+            <a href="https://www.google.com"  class="text-decoration-none text-dark">
+            <div class="feature-box blue d-flex align-items-start gap-3">
+              <i class="bi bi-bar-chart fs-1 flex-shrink-0"></i>
+              <div>
+                <h4>Corporis voluptates</h4>
+                <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
+              </div>
+            </div>
+            </a>
+          </div><!-- End Feature Borx-->
+
+
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
             <a href="https://www.google.com"  class="text-decoration-none text-dark">
             <div class="feature-box blue d-flex align-items-start gap-3">
               <i class="bi bi-bar-chart fs-1 flex-shrink-0"></i>

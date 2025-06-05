@@ -463,8 +463,8 @@ h6 {
 # Global Footer
 --------------------------------------------------------------*/
 .footer {
-  color: var(--default-color);
-  background-color: var(--background-color);
+  color: #f7f9fb;
+  background-color: #013880;
   font-size: 14px;
   position: relative;
 }
@@ -484,7 +484,7 @@ h6 {
 }
 
 .footer .footer-about .logo span {
-  color: var(--heading-color);
+  color: #f7f9fb;
   font-family: var(--heading-font);
   font-size: 26px;
   font-weight: 700;
@@ -494,6 +494,7 @@ h6 {
 .footer .footer-about p {
   font-size: 14px;
   font-family: var(--heading-font);
+  color: #f7f9fb;
 }
 
 .footer .social-links a {
@@ -503,15 +504,15 @@ h6 {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 50%);
+  border: 1px solid color-mix(in srgb, #f7f9fb, transparent 50%);
   font-size: 16px;
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  color: color-mix(in srgb,#f7f9fb, transparent 20%);
   margin-right: 10px;
   transition: 0.3s;
 }
 
 .footer .social-links a:hover {
-  color: var(--accent-color);
+  color: #f7f9fb;
   border-color: var(--accent-color);
 }
 
@@ -520,38 +521,45 @@ h6 {
   font-weight: bold;
   position: relative;
   padding-bottom: 12px;
+  color: #e1e6ff;
 }
 
 .footer .footer-links {
   margin-bottom: 30px;
+  color: #f7f9fb;
 }
 
 .footer .footer-links ul {
   list-style: none;
   padding: 0;
   margin: 0;
+  color: #f7f9fb;
 }
 
 .footer .footer-links ul i {
   padding-right: 2px;
   font-size: 12px;
   line-height: 0;
+  color: #f7f9fb;
 }
 
 .footer .footer-links ul li {
   padding: 10px 0;
   display: flex;
   align-items: center;
+  color: #f7f9fb;
 }
 
 .footer .footer-links ul li:first-child {
   padding-top: 0;
+  color: #f7f9fb;
 }
 
 .footer .footer-links ul a {
   color: color-mix(in srgb, var(--default-color), transparent 30%);
   display: inline-block;
   line-height: 1;
+  color: #f7f9fb;
 }
 
 .footer .footer-links ul a:hover {
@@ -718,7 +726,14 @@ section,
 .hero {
   position: relative;
   padding-top: 160px;
-  background: linear-gradient(135deg, color-mix(in srgb, var(--accent-color), transparent 95%) 50%, color-mix(in srgb, var(--accent-color), transparent 98%) 25%, transparent 50%);
+  background:
+  linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--accent-color), transparent 95%) 50%,
+    color-mix(in srgb, var(--accent-color), transparent 98%) 25%,
+    transparent 50%
+  ),
+  linear-gradient(140deg,var(--background-color) 0%, rgb(255, 244, 142),var(--background-color) 100%);;
 }
 
 .hero::before {
