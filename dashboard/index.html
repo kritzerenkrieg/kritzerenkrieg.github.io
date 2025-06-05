@@ -30,66 +30,13 @@
 
 <body class="service-details-page">
 
-  <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
-
-      <a href="../satu-data" class="logo d-flex align-items-center me-auto me-xl-0">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <img src="../assets/img/logo-its.png" alt="">
-        <h1 class="sitename">Satu Data ITS</h1>
-      </a>
-
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="../">Beranda</a></li>
-          <li class="dropdown"><a href="#" class="active"><span>Dashboard</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="pemeringkatan/">Pemeringkatan</a></li>
-              <li><a href="akademik/">Akademik</a></li>
-              <li class="dropdown"><a href="#">Akreditasi</a>
-                <ul>
-                  <li><a href="akreditasi/nasional/index.html" class="active">Nasional</a></li>
-                  <li><a href="akreditas/internasional">International</a></li>
-                </ul>
-              </li>
-              <li><a href="kemahasiswaan/">Kemahasiswaaan</a></li>
-              <li><a href="#">Sarana Prasarana</a></li>  
-              <li><a href="#">Keuangan</a></li>
-              <li class="dropdown"><a href="#">SDM</a>
-                <ul>
-                  <li><a href="sdm/dosen/">Dosen</a></li>
-                  <li><a href="sdm/tendik/">Tendik</a></li>
-                </ul>
-              </li>
-              <li><a href="penelitian/">Penelitian</a></li>
-              <li class="dropdown"><a href="#">Pengabdian Masyarakat</a>
-                <ul>
-                  <li><a href="pengabdian-masyarakat/pengabdian masyarakat/">Pengabdian Masyarakat</a></li>
-                  <li><a href="pengabdian-masyarakat/kkn/">KKN</a></li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-          <li class="dropdown"><a href="#"><span>Open Data</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="#">Tentang Kami</a></li>  
-              <li><a href="#">Dataset</a></li>
-              <li><a href="https://www.its.ac.id/sdmo/id/referensi-peraturan/ " target="_blank" rel="noopener noreferrer">Peraturan Rektor</a></li>
-              <li><a href="https://www.its.ac.id/ppid/daftar-informasi-publik/">Informasi Publik</a></li>
-              <li><a href="#">Permohonan Data</a></li>
-              <li><a href="#">Regulasi</a></li>
-              <li><a href="#">Kebijakan Privasi</a></li>
-            </ul>
-          </li>
-          <li><a href="../satu-data/#berita">Berita</a></li>
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
-
-      <a class="btn-getstarted" href="https://data.its.ac.id/">Login</a>
-
-      </div>
-  </header>
+  <div id="navbar"></div> <!-- DYNAMIC NAVBAR WIDGET -->
+  <script>
+    fetch('/assets/widget/navbar.html')
+      .then(response => response.text())
+      .then(html => document.getElementById('navbar').innerHTML = html);
+  </script>
+  
   <main class="main">
 
     <!-- Page Title -->
