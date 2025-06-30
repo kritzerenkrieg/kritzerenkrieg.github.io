@@ -1,210 +1,403 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Dashboard</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
 
-<head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Dashboard</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
+    <!-- Favicons -->
+    <link href="../assets/img/favicon.png" rel="icon" />
+    <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
 
-  <!-- Favicons -->
-  <link href="../assets/img/favicon.png" rel="icon">
-  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- Vendor CSS Files -->
+    <link
+      href="../assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="../assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="../assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link
+      href="../assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="../assets/vendor/swiper/swiper-bundle.min.css"
+      rel="stylesheet"
+    />
 
-  <!-- Vendor CSS Files -->
-  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <!-- Main CSS File -->
+    <link href="../assets/css/main.css" rel="stylesheet" />
+    <style>
+      .feature-box {
+        transition: all 0.3s ease;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
 
-  <!-- Main CSS File -->
-  <link href="../assets/css/main.css" rel="stylesheet">
-</head>
+      .feature-box:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      }
 
-<body class="service-details-page">
+      .feature-box.blue:hover {
+        border-color: #007bff;
+      }
 
-  <div id="navbar"></div> <!-- DYNAMIC NAVBAR WIDGET -->
-  <script>
-    fetch('/assets/widget/navbar.html')
-      .then(response => response.text())
-      .then(html => document.getElementById('navbar').innerHTML = html);
-  </script>
-  
-  <main class="main">
+      #noResultsMessage {
+        display: none; /* Hidden by default */
+        text-align: center;
+        padding: 20px;
+        font-size: 1.2em;
+        color: #6c757d;
+      }
+    </style>
+  </head>
 
-    <!-- Page Title -->
-    <div class="page-title light-background">
-      <div class="container">
-        <h1>Dashboard</h1>
-        <nav class="breadcrumbs">
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li class="current">Dashboard</li>
-          </ol>
-        </nav>
+  <body class="service-details-page">
+    <div id="navbar"></div>
+    <!-- DYNAMIC NAVBAR WIDGET -->
+    <script>
+      fetch("/assets/widget/navbar.html")
+        .then((response) => response.text())
+        .then((html) => (document.getElementById("navbar").innerHTML = html));
+    </script>
+
+    <main class="main">
+      <!-- Page Title -->
+      <div class="page-title light-background">
+        <div class="container">
+          <h1>Dashboard</h1>
+          <nav class="breadcrumbs">
+            <ol>
+              <li><a href="index.html">Home</a></li>
+              <li class="current">Dashboard</li>
+            </ol>
+          </nav>
+        </div>
       </div>
-    </div><!-- End Page Title -->
+      <!-- End Page Title -->
 
-    <!-- Dashboard Section -->
-    <section id="features-cards" class="features-cards section">
-
-      <div class="row justify-content-center mb-4" data-aos="fade-up">
+      <!-- Dashboard Section -->
+      <section id="features-cards" class="features-cards section">
+        <div class="row justify-content-center mb-4" data-aos="fade-up">
           <div class="col-md-6 col-lg-4">
             <form role="search">
               <div class="input-group">
-                <input type="text" class="form-control" placeholder="Search for dashboards..." aria-label="Search For Dashboards">
-                <button class="btn btn-primary" type="submit">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="dashboardSearchInput"
+                  placeholder="Search for dashboards..."
+                  aria-label="Search For Dashboards"
+                />
+                <button
+                  class="btn btn-primary"
+                  type="submit"
+                  id="dashboardSearchButton"
+                >
                   <i class="bi bi-search"></i>
                 </button>
               </div>
             </form>
           </div>
-      </div>
-
-      <div class="container">
-
-        <div class="row gy-4">
-
-          <div class="col-xl-3 col-md-3" data-aos="zoom-in" data-aos-delay="100">
-            <a href="https://www.google.com"  class="text-decoration-none text-dark">
-            <div class="feature-box blue d-flex align-items-start gap-3">
-              <i class="bi bi-bar-chart fs-1 flex-shrink-0"></i>
-              <div>
-                <h4>Corporis voluptates</h4>
-                <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
-              </div>
-            </div>
-            </a>
-          </div><!-- End Feature Borx-->
-
-          <div class="col-xl-3 col-md-3" data-aos="zoom-in" data-aos-delay="100">
-            <a href="https://www.google.com"  class="text-decoration-none text-dark">
-            <div class="feature-box blue d-flex align-items-start gap-3">
-              <i class="bi bi-bar-chart fs-1 flex-shrink-0"></i>
-              <div>
-                <h4>Corporis voluptates</h4>
-                <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
-              </div>
-            </div>
-            </a>
-          </div><!-- End Feature Borx-->
-
-
-          <div class="col-xl-3 col-md-3" data-aos="zoom-in" data-aos-delay="100">
-            <a href="https://www.google.com"  class="text-decoration-none text-dark">
-            <div class="feature-box blue d-flex align-items-start gap-3">
-              <i class="bi bi-bar-chart fs-1 flex-shrink-0"></i>
-              <div>
-                <h4>Corporis voluptates</h4>
-                <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
-              </div>
-            </div>
-            </a>
-          </div><!-- End Feature Borx-->
-
-
-          <div class="col-xl-3 col-md-3" data-aos="zoom-in" data-aos-delay="100">
-            <a href="https://www.google.com"  class="text-decoration-none text-dark">
-            <div class="feature-box blue d-flex align-items-start gap-3">
-              <i class="bi bi-bar-chart fs-1 flex-shrink-0"></i>
-              <div>
-                <h4>Corporis voluptates</h4>
-                <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
-              </div>
-            </div>
-            </a>
-          </div><!-- End Feature Borx-->
-
-
-          <div class="col-xl-3 col-md-3" data-aos="zoom-in" data-aos-delay="100">
-            <a href="https://www.google.com"  class="text-decoration-none text-dark">
-            <div class="feature-box blue d-flex align-items-start gap-3">
-              <i class="bi bi-bar-chart fs-1 flex-shrink-0"></i>
-              <div>
-                <h4>Corporis voluptates</h4>
-                <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
-              </div>
-            </div>
-            </a>
-          </div><!-- End Feature Borx-->
-
-
-          <div class="col-xl-3 col-md-3" data-aos="zoom-in" data-aos-delay="100">
-            <a href="https://www.google.com"  class="text-decoration-none text-dark">
-            <div class="feature-box blue d-flex align-items-start gap-3">
-              <i class="bi bi-bar-chart fs-1 flex-shrink-0"></i>
-              <div>
-                <h4>Corporis voluptates</h4>
-                <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
-              </div>
-            </div>
-            </a>
-          </div><!-- End Feature Borx-->
-
-
-          <div class="col-xl-3 col-md-3" data-aos="zoom-in" data-aos-delay="100">
-            <a href="https://www.google.com"  class="text-decoration-none text-dark">
-            <div class="feature-box blue d-flex align-items-start gap-3">
-              <i class="bi bi-bar-chart fs-1 flex-shrink-0"></i>
-              <div>
-                <h4>Corporis voluptates</h4>
-                <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
-              </div>
-            </div>
-            </a>
-          </div><!-- End Feature Borx-->
-
-
-          <div class="col-xl-3 col-md-3" data-aos="zoom-in" data-aos-delay="100">
-            <a href="https://www.google.com"  class="text-decoration-none text-dark">
-            <div class="feature-box blue d-flex align-items-start gap-3">
-              <i class="bi bi-bar-chart fs-1 flex-shrink-0"></i>
-              <div>
-                <h4>Corporis voluptates</h4>
-                <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
-              </div>
-            </div>
-            </a>
-          </div><!-- End Feature Borx-->
-
-
         </div>
 
-      </div>
+        <div class="container" id="dashboardCardsContainer">
+          <div
+            class="row gy-4 gx-3 d-flex flex-wrap justify-content-center"
+            id="dashboardCardsRow"
+          >
+            <div
+              class="col-xl-3 col-md-3"
+              data-aos="zoom-in"
+              data-aos-delay="100"
+            >
+              <a
+                href="/dashboard/pemeringkatan/"
+                class="text-decoration-none text-dark"
+              >
+                <div class="feature-box blue d-flex align-items-start gap-3">
+                  <i class="bi bi-bar-chart fs-1 flex-shrink-0"></i>
+                  <div>
+                    <h4>Pemeringkatan</h4>
+                    <p>View university rankings and related data.</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div
+              class="col-xl-3 col-md-3"
+              data-aos="zoom-in"
+              data-aos-delay="100"
+            >
+              <a
+                href="/dashboard/akademik/"
+                class="text-decoration-none text-dark"
+              >
+                <div class="feature-box blue d-flex align-items-start gap-3">
+                  <i class="bi bi-book fs-1 flex-shrink-0"></i>
+                  <div>
+                    <h4>Akademik</h4>
+                    <p>Access academic performance and information.</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div
+              class="col-xl-3 col-md-3"
+              data-aos="zoom-in"
+              data-aos-delay="100"
+            >
+              <a
+                href="/dashboard/akreditasi/nasional/"
+                class="text-decoration-none text-dark"
+              >
+                <div class="feature-box blue d-flex align-items-start gap-3">
+                  <i class="bi bi-patch-check fs-1 flex-shrink-0"></i>
+                  <div>
+                    <h4>Akreditasi Nasional</h4>
+                    <p>View national accreditation status and details.</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div
+              class="col-xl-3 col-md-3"
+              data-aos="zoom-in"
+              data-aos-delay="100"
+            >
+              <a
+                href="/dashboard/akreditasi/internasional/"
+                class="text-decoration-none text-dark"
+              >
+                <div class="feature-box blue d-flex align-items-start gap-3">
+                  <i class="bi bi-globe fs-1 flex-shrink-0"></i>
+                  <div>
+                    <h4>Akreditasi Internasional</h4>
+                    <p>Explore international accreditation information.</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div
+              class="col-xl-3 col-md-3"
+              data-aos="zoom-in"
+              data-aos-delay="100"
+            >
+              <a
+                href="/dashboard/kemahasiswaan/"
+                class="text-decoration-none text-dark"
+              >
+                <div class="feature-box blue d-flex align-items-start gap-3">
+                  <i class="bi bi-mortarboard fs-1 flex-shrink-0"></i>
+                  <div>
+                    <h4>Kemahasiswaan</h4>
+                    <p>
+                      Information related to student affairs and activities.
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div
+              class="col-xl-3 col-md-3"
+              data-aos="zoom-in"
+              data-aos-delay="100"
+            >
+              <a
+                href="/dashboard/sdm/dosen/"
+                class="text-decoration-none text-dark"
+              >
+                <div class="feature-box blue d-flex align-items-start gap-3">
+                  <i class="bi bi-person-badge fs-1 flex-shrink-0"></i>
+                  <div>
+                    <h4>Dosen</h4>
+                    <p>Human resources information for lecturers.</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div
+              class="col-xl-3 col-md-3"
+              data-aos="zoom-in"
+              data-aos-delay="100"
+            >
+              <a
+                href="/dashboard/sdm/tendik/"
+                class="text-decoration-none text-dark"
+              >
+                <div class="feature-box blue d-flex align-items-start gap-3">
+                  <i class="bi bi-person-workspace fs-1 flex-shrink-0"></i>
+                  <div>
+                    <h4>Tendik</h4>
+                    <p>Human resources information for educational staff.</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div
+              class="col-xl-3 col-md-3"
+              data-aos="zoom-in"
+              data-aos-delay="100"
+            >
+              <a
+                href="/dashboard/penelitian/"
+                class="text-decoration-none text-dark"
+              >
+                <div class="feature-box blue d-flex align-items-start gap-3">
+                  <i class="bi bi-journal-richtext fs-1 flex-shrink-0"></i>
+                  <div>
+                    <h4>Penelitian</h4>
+                    <p>Access research projects and publications.</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div
+              class="col-xl-3 col-md-3"
+              data-aos="zoom-in"
+              data-aos-delay="100"
+            >
+              <a
+                href="/dashboard/pengabdian-masyarakat/pengabdian masyarakat/"
+                class="text-decoration-none text-dark"
+              >
+                <div class="feature-box blue d-flex align-items-start gap-3">
+                  <i class="bi bi-people fs-1 flex-shrink-0"></i>
+                  <div>
+                    <h4>Pengabdian Masyarakat</h4>
+                    <p>Community service activities and initiatives.</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div
+              class="col-xl-3 col-md-3"
+              data-aos="zoom-in"
+              data-aos-delay="100"
+            >
+              <a
+                href="/dashboard/pengabdian-masyarakat/kkn/"
+                class="text-decoration-none text-dark"
+              >
+                <div class="feature-box blue d-flex align-items-start gap-3">
+                  <i class="bi bi-house-door fs-1 flex-shrink-0"></i>
+                  <div>
+                    <h4>KKN</h4>
+                    <p>
+                      Information on Community Service Programs (Kuliah Kerja
+                      Nyata).
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div id="noResultsMessage" class="mt-5">
+            <p>We're sorry, there are no dashboards matching your search.</p>
+          </div>
+        </div>
+      </section>
+      <!-- /Features Cards Section -->
+    </main>
 
-    </section><!-- /Features Cards Section -->
+    <footer id="footer" class="footer">
+      <script>
+        fetch("/assets/widget/footer.html")
+          .then((response) => response.text())
+          .then((html) => (document.getElementById("footer").innerHTML = html));
+      </script>
+    </footer>
 
-  </main>
+    <!-- Scroll Top -->
+    <a
+      href="#"
+      id="scroll-top"
+      class="scroll-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
 
-  <footer id="footer" class="footer">
+    <!-- Vendor JS Files -->
+    <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/vendor/php-email-form/validate.js"></script>
+    <script src="../assets/vendor/aos/aos.js"></script>
+    <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="../assets/vendor/purecounter/purecounter_vanilla.js"></script>
+
+    <!-- Main JS File -->
+    <script src="../assets/js/main.js"></script>
     <script>
-      fetch('/assets/widget/footer.html')
-        .then(response => response.text())
-        .then(html => document.getElementById('footer').innerHTML = html);
+      document.addEventListener("DOMContentLoaded", function () {
+        const searchInput = document.getElementById("dashboardSearchInput");
+        const dashboardCardsRow = document.getElementById("dashboardCardsRow");
+        const dashboardCards = dashboardCardsRow.querySelectorAll(".col-xl-3");
+        const noResultsMessage = document.getElementById("noResultsMessage");
+
+        function filterDashboards() {
+          const searchTerm = searchInput.value.toLowerCase().trim();
+
+          let resultsFound = false;
+          dashboardCards.forEach((card) => {
+            const titleElement = card.querySelector("h4");
+            const descriptionElement = card.querySelector("p");
+
+            const title = titleElement
+              ? titleElement.textContent.toLowerCase()
+              : "";
+            const description = descriptionElement
+              ? descriptionElement.textContent.toLowerCase()
+              : "";
+
+            if (
+              title.includes(searchTerm) ||
+              description.includes(searchTerm)
+            ) {
+              card.style.display = "";
+              resultsFound = true;
+            } else {
+              card.style.display = "none";
+            }
+          });
+
+          if (resultsFound || searchTerm === "") {
+            noResultsMessage.style.display = "none";
+          } else {
+            noResultsMessage.style.display = "block";
+          }
+        }
+
+        const urlParams = new URLSearchParams(window.location.search);
+        const initialQuery = urlParams.get("query");
+
+        if (initialQuery) {
+          searchInput.value = initialQuery;
+          filterDashboards();
+        } else {
+          filterDashboards();
+        }
+
+        searchInput.addEventListener("keyup", filterDashboards);
+        const dashboardSearchForm = searchInput.closest("form");
+        if (dashboardSearchForm) {
+          dashboardSearchForm.addEventListener("submit", function (event) {
+            event.preventDefault();
+            filterDashboards();
+          });
+        }
+      });
     </script>
-  </footer>
-
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Vendor JS Files -->
-  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="../assets/vendor/php-email-form/validate.js"></script>
-  <script src="../assets/vendor/aos/aos.js"></script>
-  <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="../assets/vendor/purecounter/purecounter_vanilla.js"></script>
-
-  <!-- Main JS File -->
-  <script src="../assets/js/main.js"></script>
-
-</body>
-
+  </body>
 </html>
