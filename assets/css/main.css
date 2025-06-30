@@ -179,6 +179,16 @@ h6 {
   color: var(--heading-color);
 }
 
+.btn-its {
+  background-color: #FFBD07 !important;
+  color: #013880 !important;
+  transition: font-weight 0.2s ease-in-out;
+}
+
+.btn-its:hover {
+  font-weight: bold;
+}
+
 .header .btn-getstarted,
 .header .btn-getstarted:focus {
   color: var(--contrast-color);
