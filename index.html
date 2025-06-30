@@ -1,394 +1,279 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Satu Data ITS</title>
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
 
-    <!-- Favicons -->
-    <link href="assets/img/favicon.png" rel="icon" />
-    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Satu Data ITS</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
 
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com" rel="preconnect" />
-    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
 
-    <!-- Vendor CSS Files -->
-    <link
-      href="assets/vendor/bootstrap/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
-      rel="stylesheet"
-    />
-    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
-    <link
-      href="assets/vendor/glightbox/css/glightbox.min.css"
-      rel="stylesheet"
-    />
-    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-    <!-- Main CSS File -->
-    <link href="assets/css/main.css" rel="stylesheet" />
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
-    <style>
-      .feature-box {
-        transition: all 0.3s ease;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      }
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-      .feature-box:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-      }
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
 
-      .feature-box.blue:hover {
-        border-color: #007bff;
-      }
-    </style>
-
-    <!-- =======================================================
+  <!-- =======================================================
   * Template Name: iLanding
   * Template URL: https://bootstrapmade.com/ilanding-bootstrap-landing-page-template/
   * Updated: Nov 12 2024 with Bootstrap v5.3.3
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
-  </head>
+</head>
 
-  <body class="index-page">
-    <div id="navbar">
-      <!-- DYNAMIC NAVBAR WIDGET -->
-      <script>
-        fetch("/assets/widget/navbar.html")
-          .then((response) => response.text())
-          .then((html) => (document.getElementById("navbar").innerHTML = html));
-      </script>
-    </div>
+<body class="index-page">
 
-    <main class="main">
-      <!-- Hero Section -->
-      <section id="hero" class="hero section">
-        <div class="container" data-aos="fade-up" data-aos-delay="100">
-          <div class="row align-items-center">
-            <div class="col-lg-6">
-              <div class="hero-content" data-aos="fade-up" data-aos-delay="200">
-                <h1 class="mb-4">
-                  Satu Data <br />
-                  <span class="accent-text">ITS</span>
-                </h1>
+  <div id="navbar"> <!-- DYNAMIC NAVBAR WIDGET -->
+    <script>
+      fetch('/assets/widget/navbar.html')
+        .then(response => response.text())
+        .then(html => document.getElementById('navbar').innerHTML = html);
+    </script>
+  </div>
 
-                <p class="mb-4 mb-md-5">
-                  Nullam quis ante. Etiam sit amet orci eget eros faucibus
-                  tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec
-                  sodales sagittis magna.
-                </p>
+  <main class="main">
 
-                <div class="hero-buttons">
-                  <a href="#about" class="btn btn-primary me-0 me-sm-2 mx-1"
-                    >Show More</a
-                  >
-                </div>
-              </div>
-            </div>
+    <!-- Hero Section -->
+    <section id="hero" class="hero section">
 
-            <div class="col-lg-6 hero-img">
-              <div class="hero-image" data-aos="zoom-out" data-aos-delay="300">
-                <img
-                  src="assets/img/illustration-1.webp"
-                  alt="Hero Image"
-                  class="img-fluid animated"
-                />
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <div class="hero-content" data-aos="fade-up" data-aos-delay="200">
+              <h1 class="mb-4">
+                Satu Data <br>
+                <span class="accent-text">ITS</span>
+              </h1>
+
+              <p class="mb-4 mb-md-5">
+                Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt.
+                Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna.
+              </p>
+
+              <div class="hero-buttons">
+                <a href="#about" class="btn btn-primary me-0 me-sm-2 mx-1">Show More</a>
               </div>
             </div>
           </div>
 
-          <div
-            class="row stats-row gy-4 mt-5"
-            data-aos="fade-up"
-            data-aos-delay="500"
-          >
-            <div class="col-lg-3 col-md-6">
-              <div class="stat-item">
-                <div class="stat-icon">
-                  <i class="bi bi-hash"></i>
-                </div>
-                <div class="stat-content">
-                  <h4
-                    data-purecounter-start="0"
-                    data-purecounter-end="585"
-                    class="purecounter"
-                  ></h4>
-                  <p class="mb-0">QS World Ranking</p>
-                </div>
+          <div class="col-lg-6 hero-img">
+            <div class="hero-image" data-aos="zoom-out" data-aos-delay="300">
+              <img src="assets/img/illustration-1.webp" alt="Hero Image" class="img-fluid animated">
+            </div>
+          </div>
+        </div>
+
+        <div class="row stats-row gy-4 mt-5" data-aos="fade-up" data-aos-delay="500">
+          <div class="col-lg-3 col-md-6">
+            <div class="stat-item">
+              <div class="stat-icon">
+                <i class="bi bi-hash"></i>
+              </div>
+              <div class="stat-content">
+                <h4 data-purecounter-start="0" data-purecounter-end="585" class="purecounter"></h4>
+                <p class="mb-0">QS World Ranking</p>
               </div>
             </div>
-            <div class="col-lg-3 col-md-6">
-              <div class="stat-item">
-                <div class="stat-icon">
-                  <i class="bi bi-briefcase"></i>
-                </div>
-                <div class="stat-content">
-                  <h4
-                    data-purecounter-start="0"
-                    data-purecounter-end="1012"
-                    class="purecounter"
-                  ></h4>
-                  <p class="mb-0">Lecturer</p>
-                </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="stat-item">
+              <div class="stat-icon">
+                <i class="bi bi-briefcase"></i>
+              </div>
+              <div class="stat-content">
+                <h4 data-purecounter-start="0" data-purecounter-end="1012" class="purecounter" ></h4>
+                <p class="mb-0">Lecturer</p>
               </div>
             </div>
-            <div class="col-lg-3 col-md-6">
-              <div class="stat-item">
-                <div class="stat-icon">
-                  <i class="bi bi-graph-up"></i>
-                </div>
-                <div class="stat-content">
-                  <h4
-                    data-purecounter-start="0"
-                    data-purecounter-end="5000"
-                    class="purecounter"
-                  ></h4>
-                  <p class="mb-0">Student</p>
-                </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="stat-item">
+              <div class="stat-icon">
+                <i class="bi bi-graph-up"></i>
+              </div>
+              <div class="stat-content">
+                <h4 data-purecounter-start="0" data-purecounter-end="22953" class="purecounter" ></h4>
+                <p class="mb-0">Student</p>
               </div>
             </div>
-            <div class="col-lg-3 col-md-6">
-              <div class="stat-item">
-                <div class="stat-icon">
-                  <i class="bi bi-award"></i>
-                </div>
-                <div class="stat-content">
-                  <h4
-                    data-purecounter-start="0"
-                    data-purecounter-end="10000"
-                    class="purecounter"
-                  ></h4>
-                  <p class="mb-0">Alumnis</p>
-                </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <div class="stat-item">
+              <div class="stat-icon">
+                <i class="bi bi-award"></i>
+              </div>
+              <div class="stat-content">
+                <h4 data-purecounter-start="0" data-purecounter-end="51469 " class="purecounter"></h4>
+                <p class="mb-0">Alumnis</p>
               </div>
             </div>
           </div>
         </div>
-      </section>
-      <!-- /Hero Section -->
 
-      <!-- Dashboard Section -->
-      <section id="features-cards" class="features-cards section">
-        <div class="container section-title pb-1" data-aos="fade-up">
-          <h2>Dashboard</h2>
-        </div>
-        <!-- End Section Title -->
+      </div>
+    </section><!-- /Hero Section -->
 
-        <div
-          class="row gy-4 gx-3 d-flex flex-wrap justify-content-center mb-4"
-          data-aos="fade-up"
-        >
-          <div class="col-md-6 col-lg-4">
-            <form role="search" action="dashboard/index.html" method="GET">
-              <div class="input-group">
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="Search for dashboards..."
-                  aria-label="Search For Dashboards"
-                  name="query"
-                  id="searchQueryInput"
-                />
-                <button class="btn btn-primary" type="submit">
-                  <i class="bi bi-search"></i>
-                </button>
-              </div>
-            </form>
-          </div>
-        </div>
+    <!-- Dashboard Section -->
+    <section id="features-cards" class="features-cards section">
+      <div class="container section-title pb-1" data-aos="fade-up">
+        <h2>Dashboard</h2>
+      </div><!-- End Section Title -->
 
-        <div class="container">
-          <div class="row gy-4 gx-3 d-flex flex-wrap justify-content-center">
-            <div
-              class="col-xl-3 col-md-3"
-              data-aos="zoom-in"
-              data-aos-delay="100"
-            >
-              <a
-                href="/dashboard/pemeringkatan/"
-                class="text-decoration-none text-dark"
-              >
-                <div class="feature-box blue d-flex align-items-start gap-3">
-                  <i class="bi bi-bar-chart fs-1 flex-shrink-0"></i>
-                  <div>
-                    <h4>Pemeringkatan</h4>
-                    <p>View university rankings and related data.</p>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div
-              class="col-xl-3 col-md-3"
-              data-aos="zoom-in"
-              data-aos-delay="100"
-            >
-              <a
-                href="/dashboard/akademik/"
-                class="text-decoration-none text-dark"
-              >
-                <div class="feature-box blue d-flex align-items-start gap-3">
-                  <i class="bi bi-book fs-1 flex-shrink-0"></i>
-                  <div>
-                    <h4>Akademik</h4>
-                    <p>Access academic performance and information.</p>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div
-              class="col-xl-3 col-md-3"
-              data-aos="zoom-in"
-              data-aos-delay="100"
-            >
-              <a
-                href="/dashboard/akreditasi/nasional/"
-                class="text-decoration-none text-dark"
-              >
-                <div class="feature-box blue d-flex align-items-start gap-3">
-                  <i class="bi bi-patch-check fs-1 flex-shrink-0"></i>
-                  <div>
-                    <h4>Akreditasi Nasional</h4>
-                    <p>View national accreditation status and details.</p>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div
-              class="col-xl-3 col-md-3"
-              data-aos="zoom-in"
-              data-aos-delay="100"
-            >
-              <a
-                href="/dashboard/akreditasi/internasional/"
-                class="text-decoration-none text-dark"
-              >
-                <div class="feature-box blue d-flex align-items-start gap-3">
-                  <i class="bi bi-globe fs-1 flex-shrink-0"></i>
-                  <div>
-                    <h4>Akreditasi Internasional</h4>
-                    <p>Explore international accreditation information.</p>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div
-              class="col-xl-3 col-md-3"
-              data-aos="zoom-in"
-              data-aos-delay="100"
-            >
-              <a
-                href="/dashboard/kemahasiswaan/"
-                class="text-decoration-none text-dark"
-              >
-                <div class="feature-box blue d-flex align-items-start gap-3">
-                  <i class="bi bi-mortarboard fs-1 flex-shrink-0"></i>
-                  <div>
-                    <h4>Kemahasiswaan</h4>
-                    <p>
-                      Information related to student affairs and activities.
-                    </p>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div
-              class="col-xl-3 col-md-3"
-              data-aos="zoom-in"
-              data-aos-delay="100"
-            >
-              <a
-                href="/dashboard/sdm/dosen/"
-                class="text-decoration-none text-dark"
-              >
-                <div class="feature-box blue d-flex align-items-start gap-3">
-                  <i class="bi bi-person-badge fs-1 flex-shrink-0"></i>
-                  <div>
-                    <h4>Dosen</h4>
-                    <p>Human resources information for lecturers.</p>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div
-              class="col-xl-3 col-md-3"
-              data-aos="zoom-in"
-              data-aos-delay="100"
-            >
-              <a
-                href="/dashboard/sdm/tendik/"
-                class="text-decoration-none text-dark"
-              >
-                <div class="feature-box blue d-flex align-items-start gap-3">
-                  <i class="bi bi-person-workspace fs-1 flex-shrink-0"></i>
-                  <div>
-                    <h4>Tendik</h4>
-                    <p>Human resources information for educational staff.</p>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div
-              class="col-xl-3 col-md-3"
-              data-aos="zoom-in"
-              data-aos-delay="100"
-            >
-              <a
-                href="/dashboard/penelitian/"
-                class="text-decoration-none text-dark"
-              >
-                <div class="feature-box blue d-flex align-items-start gap-3">
-                  <i class="bi bi-journal-richtext fs-1 flex-shrink-0"></i>
-                  <div>
-                    <h4>Penelitian</h4>
-                    <p>Access research projects and publications.</p>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <!-- End Feature Borx-->
-          </div>
-        </div>
-
-        <div class="row mt-4" data-aos="fade-up">
-          <div class="col-12 text-center">
-            <a href="dashboard/index.html" class="btn btn-primary btn-lg">
-              More Dashboards <i class="bi bi-arrow-right"></i>
-            </a>
-          </div>
-        </div>
-      </section>
-      <!-- /Features Cards Section -->
-
-      <!-- Datasets Section -->
-      <section id="features-cards" class="features-cards section">
-        <div class="container section-title pb-1" data-aos="fade-up">
-          <h2>Datasets</h2>
-        </div>
-        <!-- End Section Title -->
-
-        <div class="row justify-content-center mb-4" data-aos="fade-up">
+      <div class="row gy-4 gx-3 d-flex flex-wrap justify-content-center mb-4" data-aos="fade-up">
           <div class="col-md-6 col-lg-4">
             <form role="search">
               <div class="input-group">
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="Search for datasets..."
-                  aria-label="Search For Dashboards"
-                />
+                <input type="text" class="form-control" placeholder="Search for dashboards..." aria-label="Search For Dashboards">
+                <button class="btn btn-primary" type="submit">
+                  <i class="bi bi-search"></i>
+                </button>
+              </div>
+            </form>
+          </div>
+      </div>
+
+      <div class="container">
+
+        <div class="row gy-4 gx-3 d-flex flex-wrap justify-content-center">
+
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
+            <a href="https://www.google.com"  class="text-decoration-none text-dark">
+            <div class="feature-box blue d-flex align-items-start gap-3">
+              <i class="bi bi-bar-chart fs-1 flex-shrink-0"></i>
+              <div>
+                <h4>Corporis voluptates</h4>
+                <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
+              </div>
+            </div>
+            </a>
+          </div><!-- End Feature Borx-->
+
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
+            <a href="https://www.google.com"  class="text-decoration-none text-dark">
+            <div class="feature-box blue d-flex align-items-start gap-3">
+              <i class="bi bi-bar-chart fs-1 flex-shrink-0"></i>
+              <div>
+                <h4>Corporis voluptates</h4>
+                <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
+              </div>
+            </div>
+            </a>
+          </div><!-- End Feature Borx-->
+
+
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
+            <a href="https://www.google.com"  class="text-decoration-none text-dark">
+            <div class="feature-box blue d-flex align-items-start gap-3">
+              <i class="bi bi-bar-chart fs-1 flex-shrink-0"></i>
+              <div>
+                <h4>Corporis voluptates</h4>
+                <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
+              </div>
+            </div>
+            </a>
+          </div><!-- End Feature Borx-->
+
+
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
+            <a href="https://www.google.com"  class="text-decoration-none text-dark">
+            <div class="feature-box blue d-flex align-items-start gap-3">
+              <i class="bi bi-bar-chart fs-1 flex-shrink-0"></i>
+              <div>
+                <h4>Corporis voluptates</h4>
+                <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
+              </div>
+            </div>
+            </a>
+          </div><!-- End Feature Borx-->
+
+
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
+            <a href="https://www.google.com"  class="text-decoration-none text-dark">
+            <div class="feature-box blue d-flex align-items-start gap-3">
+              <i class="bi bi-bar-chart fs-1 flex-shrink-0"></i>
+              <div>
+                <h4>Corporis voluptates</h4>
+                <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
+              </div>
+            </div>
+            </a>
+          </div><!-- End Feature Borx-->
+
+
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
+            <a href="https://www.google.com"  class="text-decoration-none text-dark">
+            <div class="feature-box blue d-flex align-items-start gap-3">
+              <i class="bi bi-bar-chart fs-1 flex-shrink-0"></i>
+              <div>
+                <h4>Corporis voluptates</h4>
+                <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
+              </div>
+            </div>
+            </a>
+          </div><!-- End Feature Borx-->
+
+
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
+            <a href="https://www.google.com"  class="text-decoration-none text-dark">
+            <div class="feature-box blue d-flex align-items-start gap-3">
+              <i class="bi bi-bar-chart fs-1 flex-shrink-0"></i>
+              <div>
+                <h4>Corporis voluptates</h4>
+                <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
+              </div>
+            </div>
+            </a>
+          </div><!-- End Feature Borx-->
+
+
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
+            <a href="https://www.google.com"  class="text-decoration-none text-dark">
+            <div class="feature-box blue d-flex align-items-start gap-3">
+              <i class="bi bi-bar-chart fs-1 flex-shrink-0"></i>
+              <div>
+                <h4>Corporis voluptates</h4>
+                <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
+              </div>
+            </div>
+            </a>
+          </div><!-- End Feature Borx-->
+
+
+        </div>
+
+      </div>
+
+    </section><!-- /Features Cards Section -->
+
+
+    <!-- Datasets Section -->
+    <section id="features-cards" class="features-cards section">
+      <div class="container section-title pb-1" data-aos="fade-up">
+        <h2>Datasets</h2>
+      </div><!-- End Section Title -->
+
+      <div class="row justify-content-center mb-4" data-aos="fade-up">
+          <div class="col-md-6 col-lg-4">
+            <form role="search">
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search for datasets..." aria-label="Search For Dashboards">
                 <button class="btn btn-primary" type="submit">
                   <i class="bi bi-search"></i>
                 </button>
@@ -397,236 +282,152 @@
           </div>
         </div>
 
-        <div class="container">
-          <div class="row gy-4">
-            <div
-              class="col-xl-3 col-md-3"
-              data-aos="zoom-in"
-              data-aos-delay="100"
-            >
-              <a
-                href="https://www.google.com"
-                class="text-decoration-none text-dark"
-              >
-                <div class="feature-box orange d-flex align-items-start gap-3">
-                  <i class="bi bi-database fs-1 flex-shrink-0"></i>
-                  <div>
-                    <h4>Corporis voluptates</h4>
-                    <p>
-                      Consequuntur sunt aut quasi enim aliquam quae harum
-                      pariatur laboris nisi ut aliquip
-                    </p>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <!-- End Feature Borx-->
+      <div class="container">
+        <div class="row gy-4">
 
-            <div
-              class="col-xl-3 col-md-3"
-              data-aos="zoom-in"
-              data-aos-delay="100"
-            >
-              <a
-                href="https://www.google.com"
-                class="text-decoration-none text-dark"
-              >
-                <div class="feature-box orange d-flex align-items-start gap-3">
-                  <i class="bi bi-database fs-1 flex-shrink-0"></i>
-                  <div>
-                    <h4>Corporis voluptates</h4>
-                    <p>
-                      Consequuntur sunt aut quasi enim aliquam quae harum
-                      pariatur laboris nisi ut aliquip
-                    </p>
-                  </div>
-                </div>
-              </a>
+          <div class="col-xl-3 col-md-3" data-aos="zoom-in" data-aos-delay="100">
+            <a href="https://www.google.com"  class="text-decoration-none text-dark">
+            <div class="feature-box orange d-flex align-items-start gap-3">
+              <i class="bi bi-database fs-1 flex-shrink-0"></i>
+              <div>
+                <h4>Corporis voluptates</h4></a>
+                <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
+              </div>
             </div>
-            <!-- End Feature Borx-->
+            </a>
+          </div><!-- End Feature Borx-->
 
-            <div
-              class="col-xl-3 col-md-3"
-              data-aos="zoom-in"
-              data-aos-delay="100"
-            >
-              <a
-                href="https://www.google.com"
-                class="text-decoration-none text-dark"
-              >
-                <div class="feature-box orange d-flex align-items-start gap-3">
-                  <i class="bi bi-database fs-1 flex-shrink-0"></i>
-                  <div>
-                    <h4>Corporis voluptates</h4>
-                    <p>
-                      Consequuntur sunt aut quasi enim aliquam quae harum
-                      pariatur laboris nisi ut aliquip
-                    </p>
-                  </div>
-                </div>
-              </a>
+          <div class="col-xl-3 col-md-3" data-aos="zoom-in" data-aos-delay="100">
+            <a href="https://www.google.com"  class="text-decoration-none text-dark">
+            <div class="feature-box orange d-flex align-items-start gap-3">
+              <i class="bi bi-database fs-1 flex-shrink-0"></i>
+              <div>
+                <h4>Corporis voluptates</h4></a>
+                <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
+              </div>
             </div>
-            <!-- End Feature Borx-->
+            </a>
+          </div><!-- End Feature Borx-->
 
-            <div
-              class="col-xl-3 col-md-3"
-              data-aos="zoom-in"
-              data-aos-delay="100"
-            >
-              <a
-                href="https://www.google.com"
-                class="text-decoration-none text-dark"
-              >
-                <div class="feature-box orange d-flex align-items-start gap-3">
-                  <i class="bi bi-database fs-1 flex-shrink-0"></i>
-                  <div>
-                    <h4>Corporis voluptates</h4>
-                    <p>
-                      Consequuntur sunt aut quasi enim aliquam quae harum
-                      pariatur laboris nisi ut aliquip
-                    </p>
-                  </div>
-                </div>
-              </a>
+          <div class="col-xl-3 col-md-3" data-aos="zoom-in" data-aos-delay="100">
+            <a href="https://www.google.com"  class="text-decoration-none text-dark">
+            <div class="feature-box orange d-flex align-items-start gap-3">
+              <i class="bi bi-database fs-1 flex-shrink-0"></i>
+              <div>
+                <h4>Corporis voluptates</h4></a>
+                <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
+              </div>
             </div>
-            <!-- End Feature Borx-->
+            </a>
+          </div><!-- End Feature Borx-->
 
-            <div
-              class="col-xl-3 col-md-3"
-              data-aos="zoom-in"
-              data-aos-delay="100"
-            >
-              <a
-                href="https://www.google.com"
-                class="text-decoration-none text-dark"
-              >
-                <div class="feature-box orange d-flex align-items-start gap-3">
-                  <i class="bi bi-database fs-1 flex-shrink-0"></i>
-                  <div>
-                    <h4>Corporis voluptates</h4>
-                    <p>
-                      Consequuntur sunt aut quasi enim aliquam quae harum
-                      pariatur laboris nisi ut aliquip
-                    </p>
-                  </div>
-                </div>
-              </a>
+          <div class="col-xl-3 col-md-3" data-aos="zoom-in" data-aos-delay="100">
+            <a href="https://www.google.com"  class="text-decoration-none text-dark">
+            <div class="feature-box orange d-flex align-items-start gap-3">
+              <i class="bi bi-database fs-1 flex-shrink-0"></i>
+              <div>
+                <h4>Corporis voluptates</h4></a>
+                <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
+              </div>
             </div>
-            <!-- End Feature Borx-->
+            </a>
+          </div><!-- End Feature Borx-->
 
-            <div
-              class="col-xl-3 col-md-3"
-              data-aos="zoom-in"
-              data-aos-delay="100"
-            >
-              <a
-                href="https://www.google.com"
-                class="text-decoration-none text-dark"
-              >
-                <div class="feature-box orange d-flex align-items-start gap-3">
-                  <i class="bi bi-database fs-1 flex-shrink-0"></i>
-                  <div>
-                    <h4>Corporis voluptates</h4>
-                    <p>
-                      Consequuntur sunt aut quasi enim aliquam quae harum
-                      pariatur laboris nisi ut aliquip
-                    </p>
-                  </div>
-                </div>
-              </a>
+          <div class="col-xl-3 col-md-3" data-aos="zoom-in" data-aos-delay="100">
+            <a href="https://www.google.com"  class="text-decoration-none text-dark">
+            <div class="feature-box orange d-flex align-items-start gap-3">
+              <i class="bi bi-database fs-1 flex-shrink-0"></i>
+              <div>
+                <h4>Corporis voluptates</h4></a>
+                <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
+              </div>
             </div>
-            <!-- End Feature Borx-->
+            </a>
+          </div><!-- End Feature Borx-->
 
-            <div
-              class="col-xl-3 col-md-3"
-              data-aos="zoom-in"
-              data-aos-delay="100"
-            >
-              <a
-                href="https://www.google.com"
-                class="text-decoration-none text-dark"
-              >
-                <div class="feature-box orange d-flex align-items-start gap-3">
-                  <i class="bi bi-database fs-1 flex-shrink-0"></i>
-                  <div>
-                    <h4>Corporis voluptates</h4>
-                    <p>
-                      Consequuntur sunt aut quasi enim aliquam quae harum
-                      pariatur laboris nisi ut aliquip
-                    </p>
-                  </div>
-                </div>
-              </a>
+          <div class="col-xl-3 col-md-3" data-aos="zoom-in" data-aos-delay="100">
+            <a href="https://www.google.com"  class="text-decoration-none text-dark">
+            <div class="feature-box orange d-flex align-items-start gap-3">
+              <i class="bi bi-database fs-1 flex-shrink-0"></i>
+              <div>
+                <h4>Corporis voluptates</h4></a>
+                <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
+              </div>
             </div>
-            <!-- End Feature Borx-->
+            </a>
+          </div><!-- End Feature Borx-->
 
-            <div
-              class="col-xl-3 col-md-3"
-              data-aos="zoom-in"
-              data-aos-delay="100"
-            >
-              <a
-                href="https://www.google.com"
-                class="text-decoration-none text-dark"
-              >
-                <div class="feature-box orange d-flex align-items-start gap-3">
-                  <i class="bi bi-database fs-1 flex-shrink-0"></i>
-                  <div>
-                    <h4>Corporis voluptates</h4>
-                    <p>
-                      Consequuntur sunt aut quasi enim aliquam quae harum
-                      pariatur laboris nisi ut aliquip
-                    </p>
-                  </div>
-                </div>
-              </a>
+          <div class="col-xl-3 col-md-3" data-aos="zoom-in" data-aos-delay="100">
+            <a href="https://www.google.com"  class="text-decoration-none text-dark">
+            <div class="feature-box orange d-flex align-items-start gap-3">
+              <i class="bi bi-database fs-1 flex-shrink-0"></i>
+              <div>
+                <h4>Corporis voluptates</h4></a>
+                <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
+              </div>
             </div>
-            <!-- End Feature Borx-->
-          </div>
+            </a>
+          </div><!-- End Feature Borx-->
+
+          <div class="col-xl-3 col-md-3" data-aos="zoom-in" data-aos-delay="100">
+            <a href="https://www.google.com"  class="text-decoration-none text-dark">
+            <div class="feature-box orange d-flex align-items-start gap-3">
+              <i class="bi bi-database fs-1 flex-shrink-0"></i>
+              <div>
+                <h4>Corporis voluptates</h4></a>
+                <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
+              </div>
+            </div>
+            </a>
+          </div><!-- End Feature Borx-->
+
         </div>
-      </section>
-      <!-- /Features Cards Section -->
 
-      <!-- Berita Section -->
-      <section id="berita" class="alt-services section">
-        <div class="container section-title pb-1" data-aos="fade-up">
-          <h2>Berita Terbaru</h2>
+      </div>
+
+    </section><!-- /Features Cards Section -->
+
+
+    <!-- Berita Section -->
+    <section id="berita" class="alt-services section">
+      <div class="container section-title pb-1" data-aos="fade-up">
+        <h2>Berita Terbaru</h2>
+      </div><!-- End Section Title -->
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div id="rss-feed" class="row gy-4">
+        Loading news...
         </div>
-        <!-- End Section Title -->
-        <div class="container" data-aos="fade-up" data-aos-delay="100">
-          <div id="rss-feed" class="row gy-4">Loading news...</div>
-          <a href="https://www.its.ac.id/news">Berita Selengkapnya -></a>
-        </div>
-      </section>
-      <!-- /Alt Services Section -->
-    </main>
+        <div style="margin-top: 8px;">
+          <a href="https://www.its.ac.id/news" class="btn btn-its me-0 me-sm-2 mx-1">Berita Selengkapnya</a>
+          
+      </div>
+    </section><!-- /Alt Services Section -->
 
-    <footer id="footer" class="footer">
-      <script>
-        fetch("/assets/widget/footer.html")
-          .then((response) => response.text())
-          .then((html) => (document.getElementById("footer").innerHTML = html));
-      </script>
-    </footer>
+  </main>
 
-    <!-- Scroll Top -->
-    <a
-      href="#"
-      id="scroll-top"
-      class="scroll-top d-flex align-items-center justify-content-center"
-      ><i class="bi bi-arrow-up-short"></i
-    ></a>
+  <footer id="footer" class="footer">
+    <script>
+      fetch('/assets/widget/footer.html')
+        .then(response => response.text())
+        .then(html => document.getElementById('footer').innerHTML = html);
+    </script>
+  </footer>
 
-    <!-- Vendor JS Files -->
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/php-email-form/validate.js"></script>
-    <script src="assets/vendor/aos/aos.js"></script>
-    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-    <!-- Main JS File -->
-    <script src="assets/js/main.js"></script>
-    <script src="assets/js/rss-news.js"></script>
-  </body>
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/rss-news.js"></script>
+
+</body>
+
 </html>
