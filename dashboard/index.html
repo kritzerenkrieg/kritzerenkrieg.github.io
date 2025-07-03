@@ -69,7 +69,7 @@
     <div id="navbar"></div>
     <!-- DYNAMIC NAVBAR WIDGET -->
     <script>
-      fetch("/assets/widget/navbar.html")
+      fetch("../assets/widget/navbar.html")
         .then((response) => response.text())
         .then((html) => (document.getElementById("navbar").innerHTML = html));
     </script>
@@ -315,7 +315,7 @@
 
     <footer id="footer" class="footer">
       <script>
-        fetch("/assets/widget/footer.html")
+        fetch("../assets/widget/footer.html")
           .then((response) => response.text())
           .then((html) => (document.getElementById("footer").innerHTML = html));
       </script>

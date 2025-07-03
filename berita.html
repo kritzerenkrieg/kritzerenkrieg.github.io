@@ -41,7 +41,7 @@
 
   <div id="navbar"> <!-- DYNAMIC NAVBAR WIDGET -->
     <script>
-      fetch('/assets/widget/navbar.html')
+      fetch('./assets/widget/navbar.html')
         .then(response => response.text())
         .then(html => document.getElementById('navbar').innerHTML = html);
     </script>

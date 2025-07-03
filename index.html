@@ -67,7 +67,7 @@
     <div id="navbar">
       <!-- DYNAMIC NAVBAR WIDGET -->
       <script>
-        fetch("/assets/widget/navbar.html")
+        fetch("./assets/widget/navbar.html")
           .then((response) => response.text())
           .then((html) => (document.getElementById("navbar").innerHTML = html));
       </script>
@@ -192,7 +192,7 @@
           data-aos="fade-up"
         >
           <div class="col-md-6 col-lg-4">
-            <form role="search" action="dashboard/index.html" method="GET">
+            <form role="search" action="./dashboard/index.html" method="GET">
               <div class="input-group">
                 <input
                   type="text"
@@ -218,7 +218,7 @@
               data-aos-delay="100"
             >
               <a
-                href="/dashboard/pemeringkatan/"
+                href="./dashboard/pemeringkatan/"
                 class="text-decoration-none text-dark"
               >
                 <div class="feature-box blue d-flex align-items-start gap-3">
@@ -236,7 +236,7 @@
               data-aos-delay="100"
             >
               <a
-                href="/dashboard/akademik/"
+                href="./dashboard/akademik/"
                 class="text-decoration-none text-dark"
               >
                 <div class="feature-box blue d-flex align-items-start gap-3">
@@ -254,7 +254,7 @@
               data-aos-delay="100"
             >
               <a
-                href="/dashboard/akreditasi/nasional/"
+                href="./dashboard/akreditasi/nasional/"
                 class="text-decoration-none text-dark"
               >
                 <div class="feature-box blue d-flex align-items-start gap-3">
@@ -272,7 +272,7 @@
               data-aos-delay="100"
             >
               <a
-                href="/dashboard/akreditasi/internasional/"
+                href="./dashboard/akreditasi/internasional/"
                 class="text-decoration-none text-dark"
               >
                 <div class="feature-box blue d-flex align-items-start gap-3">
@@ -290,7 +290,7 @@
               data-aos-delay="100"
             >
               <a
-                href="/dashboard/kemahasiswaan/"
+                href="./dashboard/kemahasiswaan/"
                 class="text-decoration-none text-dark"
               >
                 <div class="feature-box blue d-flex align-items-start gap-3">
@@ -310,7 +310,7 @@
               data-aos-delay="100"
             >
               <a
-                href="/dashboard/sdm/dosen/"
+                href="./dashboard/sdm/dosen/"
                 class="text-decoration-none text-dark"
               >
                 <div class="feature-box blue d-flex align-items-start gap-3">
@@ -328,7 +328,7 @@
               data-aos-delay="100"
             >
               <a
-                href="/dashboard/sdm/tendik/"
+                href="./dashboard/sdm/tendik/"
                 class="text-decoration-none text-dark"
               >
                 <div class="feature-box blue d-flex align-items-start gap-3">
@@ -346,7 +346,7 @@
               data-aos-delay="100"
             >
               <a
-                href="/dashboard/penelitian/"
+                href="./dashboard/penelitian/"
                 class="text-decoration-none text-dark"
               >
                 <div class="feature-box blue d-flex align-items-start gap-3">
@@ -605,7 +605,7 @@
 
     <footer id="footer" class="footer">
       <script>
-        fetch("/assets/widget/footer.html")
+        fetch("./assets/widget/footer.html")
           .then((response) => response.text())
           .then((html) => (document.getElementById("footer").innerHTML = html));
       </script>
